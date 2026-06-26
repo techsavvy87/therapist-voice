@@ -1,36 +1,136 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Virtual Therapist Voice
 
-## Getting Started
+An AI-powered online therapy platform that enables patients to communicate with a virtual therapist through both text and voice conversations. The application provides a modern, responsive interface and leverages OpenAI to generate intelligent and natural responses.
 
-First, run the development server:
+## Live Demo
+
+**Demo:** https://therapist-voice.vercel.app/
+
+> **Note**
+>
+> The current demo uses a free OpenAI API key with limited quota. As a result, AI responses may not function correctly. To experience the full functionality, configure your own valid OpenAI API key in the deployment environment.
+
+---
+
+## Features
+
+* AI-powered therapist conversations
+* Voice and text interaction
+* Natural typing animation
+* Modern and responsive UI
+* Real-time chat experience
+* Secure server-side API integration
+* Next.js App Router architecture
+* Easy deployment with Vercel
+
+---
+
+## Technology Stack
+
+### Frontend
+
+* Next.js 16
+* React 19
+* TypeScript
+* CSS
+
+### Backend
+
+* Next.js API Routes
+* OpenAI API
+
+### Deployment
+
+* Vercel
+
+---
+
+## Screenshots
+
+### Home
+
+<p align="center">
+  <img src="./screenshots/home.png" width="900">
+</p>
+
+---
+
+## Running Locally
+
+Clone the repository.
+
+```bash
+git clone https://github.com/techsavvy87/therapist-voice.git
+```
+
+Install dependencies.
+
+```bash
+npm install
+```
+
+Create a `.env.local` file.
+
+```env
+OPENAI_API_KEY=your_openai_api_key
+```
+
+Start the development server.
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Visit:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```
+http://localhost:3000
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## Environment Variables
 
-To learn more about Next.js, take a look at the following resources:
+| Variable       | Description    |
+| -------------- | -------------- |
+| OPENAI_API_KEY | OpenAI API Key |
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Project Structure
 
-## Deploy on Vercel
+```
+app/
+ ├── api/
+ │    └── chat/
+ │         └── route.ts
+ ├── page.tsx
+ ├── layout.tsx
+ └── globals.css
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Security
+
+* API keys are stored securely using Vercel Environment Variables.
+* OpenAI requests are processed through server-side API routes.
+* Sensitive credentials are never exposed to the client.
+
+---
+
+## Future Improvements
+
+* Therapist authentication
+* Patient accounts
+* Conversation history
+* Voice transcription
+* Appointment scheduling
+* Medical report generation
+* Multi-language support
+
+---
+
+## License
+
+This project is intended for demonstration and educational purposes.
