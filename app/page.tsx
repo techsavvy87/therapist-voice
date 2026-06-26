@@ -197,14 +197,12 @@ const Home: React.FC = () => {
       try {
         const API_URL = "https://api.openai.com/v1/chat/completions";
 
-        const res = await fetch(API_URL, {
+        const res = await fetch("/api/chat", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
-            Authorization: `Bearer ${OPENAI_API_KEY}`,
           },
           body: JSON.stringify({
-            model: "gpt-4o-mini",
             messages: formattedMessages,
           }),
         });
